@@ -1,25 +1,19 @@
-package javaa;
-
-public class accessmodifers {
-public void method1() {
-	System.out.println("public access modifiers implemt");
-}
-private void method2() {
-	System.out.println("private access modifiers implemt");
-}
- void method3() {
-	System.out.println("default access modifiers implement");
-}
- protected void method4() {
-	 System.out.println("protected access modifiers implement");
- }
- public static void main(String[] args) {
-	
-  accessmodifers mod=new accessmodifers();
-  mod.method1() ;
-  mod.method2();
-  mod.method3();
-  mod.method4();
+class A
+{  
+private int a=40;  
+public int b=20; 
+int c=30;
+protected int d=45;
+}  
   
-}
-}
+class Main extends A
+{  
+ public static void main(String args[]){  
+   A obj=new A();  
+   System.out.println(obj.b);//it prints 20  
+   //System.out.println(obj.a);//it gives compile time errror since a is private variable
+   System.out.println(obj.c);//it prints 30 as it belongs to same package
+   System.out.println(obj.d);//it prints  45 as class B is extending class A 
+   
+   }  
+}  }
