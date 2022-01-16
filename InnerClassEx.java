@@ -13,5 +13,3 @@ public class InnerClassEx {
     System.out.println(myInner.y + myOuter.x);
   }
 }
-
-// Outputs 15 (5 + 10)
